@@ -166,6 +166,37 @@ textarea {
     background-color: fuchsia;
 }
 
+.ba-slider {
+    position: relative;
+}
+.ba-slider__arrow {
+    position: absolute;
+    top: calc(50% - 32px);
+    z-index: 2;
+    font-size: 0;
+    width: 25px;
+    height: 63px;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    transition: transform .3s ease-in;
+}
+.ba-slider__arrow:hover {
+    transform: scale(1.5);
+}
+.ba-slider__arrow--prev {
+    left: -10px;
+    background-image: url(../img/arrow-left.png);
+}
+.ba-slider__arrow--next {
+    right: -10px;
+    background-image: url(../img/arrow-right.png);
+}
+@media (max-width: 640px){
+    .ba-slider__arrow {
+        display: none;
+    }
+}
 
 /*ba-contary*/
 .ba-contary{
