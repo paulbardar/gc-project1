@@ -132,6 +132,31 @@ textarea {
     transform: translateY(0);
 }
 
+.ba-shadow-menu-icon {
+    position: relative;
+    right: 0;
+    display: none;
+}
+.ba-shadow-menu-icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    box-shadow:
+            0 0.25em 0 0 black,
+            0 0.5em 0 0 black;
+}
+@media screen and (max-width: 500px) {
+    .ba-menu {
+        display: none;
+    }
+    .ba-shadow-menu-icon{
+        display: block;
+    }
+}
 
 /*ba-intro*/
 
@@ -197,7 +222,11 @@ textarea {
         display: none;
     }
 }
-
+@media screen and (max-width: 800px){
+    .ba-slider__img{
+        padding: 20px;
+    }
+}
 @media screen and (max-width: 500px){
     .ba-col-6{
         width: 100%;
