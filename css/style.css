@@ -120,7 +120,7 @@ textarea {
     background-color: #5094F2;
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
     height: 3px;
     opacity: 0;
     transform: translateY(-10px);
@@ -136,6 +136,8 @@ textarea {
     position: relative;
     right: 0;
     display: none;
+    width: 20px;
+    height: 20px;
 }
 .ba-shadow-menu-icon:before {
     content: "";
@@ -148,8 +150,23 @@ textarea {
     box-shadow:
             0 0.25em 0 0 black,
             0 0.5em 0 0 black;
+    transition: background .3s ease-in, box-shadow .3s ease-in;
 }
-@media screen and (max-width: 500px) {
+.ba-shadow-menu-icon:hover:before {
+    background: blue;
+    box-shadow:
+            0 0.25em 0 0 blue,
+            0 0.5em 0 0 blue;
+}
+
+@media screen and (max-width: 600px) {
+    .ba-header {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ba-nav {
+        flex-grow: 0;
+    }
     .ba-menu {
         display: none;
     }
@@ -293,7 +310,7 @@ textarea {
     background-color: #EBBB11;
 }
 .ba-contary__title {
-    font-style: 20px;
+    font-size: 20px;
     color: #5094F2;
     margin: 0;
 }
